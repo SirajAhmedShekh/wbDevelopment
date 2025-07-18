@@ -1,0 +1,23 @@
+
+.card_div{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-direction: column;
+padding: 20px;
+border: 2px solid red;
+height: 300px;
+}
+
+.infos{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
