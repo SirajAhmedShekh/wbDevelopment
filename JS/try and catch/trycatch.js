@@ -24,7 +24,7 @@
 
 // API fetch consept.
 
-const api= `https://jsonplaceholder.typicode.com/photos`;
+// const api= `https://jsonplaceholder.typicode.com/photos`;
 
 // const Apicall = ()=>{
 //   fetch(api) 
@@ -33,15 +33,15 @@ const api= `https://jsonplaceholder.typicode.com/photos`;
 //   .catch((err) => console.log(err));
 // };
 
-const apicall = async () => {
-  try{
-    let respons = await fetch(api);
-    let data = await respons.json();
-    console.warn(' ~ apicall ~ data:', data);
-  } catch (error){
-    console.warn(' ~ apicall ~ data:', error)
-  }
-};
+// const apicall = async () => {
+//   try{
+//     let respons = await fetch(api);
+//     let data = await respons.json();
+//     console.warn(' ~ apicall ~ data:', data);
+//   } catch (error){
+//     console.warn(' ~ apicall ~ data:', error)
+//   }
+// };
 
 // const appendsFunc =(data) => {
 // let datashow = document.getElementById('info');
