@@ -5,7 +5,7 @@
 //     let respons = await fetch(api);
 //     let data = await respons.json();
 //     console.warn(data);
-    
+
 //     appendsFunc(data);
 //   } catch (error) {
 //     console.error(" ~ apicall ~ data:", error);
@@ -14,7 +14,7 @@
 
 // const appendsFunc = (data) => {
 //   console.log(data);
-  
+
 //   let datashow = document.getElementById("info");
 //   data &&
 //     data.forEach((element) => {
@@ -34,50 +34,47 @@
 //     });
 // };
 
+// practic API
 
-
-
-// practic API 
-
-
-const api = `https://jsonplaceholder.typicode.com/photos`;
-
+const api = `https://fakestoreapi.com/products`;
 
 const apicoll = async () => {
-try{
-  let respons = await fetch(api);
-  let data = await respons.json(); 
- console.warn(data);
+  try {
+    const respons = await fetch(api);
+    const data = await respons.json();
+    console.log(data);
 
- appendsFunc(data);
+    apiFunction(data);
   } catch (error) {
-  console.error(" ~ apicoll ~ data:", error);
+    console.log(error);
   }
 };
 
-const appendsFunc =(data) => {
+const apiFunction = (data) => {
   console.log(data);
-  let datashow = document.getElementById("info");
-data &&
-data.forEach((element) =>{
-  let cardDiv = document.createElement("div");
-  let img = document.createElement("img");
-  let id = document.createElement("h3");
-let text = document.createElement("h1");
+
+  const data_div = document.getElementById("info");
+
+  data &&
+    data.forEach((element) => {
+      let cardDiv = document.createElement("div");
+      let img = document.createElement("img");
+      let id = document.createElement("h3");
+      let text = document.createElement("h4");
+      let price = document.createElement("number");
+      let description = document.createElement("h4");
 
 cardDiv.className = "card_div";
 
-img.src= element.thumbnailurl;
+img.src = element.image;
 id.innerText = element.id;
 text.innerText = element.title;
+price.innerText = element.price;
+description.innerText = element.description;
 
-cardDiv.append(img,id,text);
+cardDiv.append(img,id,text,price,description)
 
-datashow.append(cardDiv);
+data_div.append(cardDiv);
 
-});
-
+    });
 };
-
-
-

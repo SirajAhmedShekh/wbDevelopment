@@ -7,7 +7,7 @@ gap: 20px;
 flex-direction: column;
 padding: 20px;
 border: 2px solid rgb(243, 5, 5);
-height: 300px;
+height: 600px;
 }
 
 .infos{
@@ -16,6 +16,11 @@ height: 300px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+img{
+  width: 100px;
+  height: 200px;
 }
 
 
