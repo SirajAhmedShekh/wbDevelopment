@@ -1,24 +1,34 @@
 
 #main_div{
+  /* height: 600px; */
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 10px;
-  padding: 10px;
-  /* flex-wrap: wrap; */
-
+  gap: 50px;
+  padding: 20px;
+  background-image: linear-gradient(rgb(255, 60, 0), rgb(255, 166, 0), rgb(255, 0, 43) );
 }
+
 
 .data_show{
   height: 500px;
 border: 2px solid red;
-background-image: radial-gradient(red, blue, green);
-color: white;
+background-image: linear-gradient(rgb(0, 217, 255), rgb(183, 0, 255), rgb(255, 0, 43));
+color:transparent;
+box-shadow: 10px 10px 10px rgb(255, 0, 0);
 
 }
 
 img{
   width: 100%;
   height: 300px;
-  /* margin: 0px 30px; */
-
 }
+
+.data_show:hover{
+  color:white;
+  transition: all 1s linear;
+}
+
+#main_div:hover{
+  background-image: linear-gradient();
+}
+
