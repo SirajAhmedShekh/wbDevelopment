@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>lokalstorage</title>
+  <link rel="stylesheet" href="localstor.css">
 </head>
 <body onload="append()">
   <form onsubmit="formData(event)">
-<input placeholder="enter your name" type="text" name="userName" id="userName">
-<input placeholder="enter your pass" type="password" name="userPass" id="userPass">
-<input type="submit" value="click me">
+<input class="name_input" placeholder="enter your name" type="text" name="userName" id="userName">
+<input class="pass_input" placeholder="enter your pass" type="password" name="userPass" id="userPass">
+<input class="input-button" type="submit" value="click me">
 
   </form>
   <div id="dataAppends"></div>
 </body>
 <script>
 
-const dataBase = [];
+const dataBase = JSON.parse(localStorage.getItem("formData")) || [];
+
+
 
 function formData(e){
 e.preventDefault();
@@ -24,6 +27,11 @@ let userName = document.querySelector('#userName').value;
 
 let userPass = document.querySelector('#userPass').value;
 // console.log(userPass)
+if (userName.length === 0 || userPass.length === 0) {
+  return;
+}
+
+
 let objData = {
   id: Date.now(),
   name: userName,
@@ -37,9 +45,11 @@ let objData = {
 dataBase.push(objData);
 
 localStorage.setItem('sirajForData',JSON.stringify(dataBase))
-append()
+append();
 document.querySelector('#userName').value='';
 document.querySelector('#userPass').value='';
+
+
 
 
 }
@@ -57,15 +67,31 @@ const userPass = document.createElement('h3');
 const btn_1 =document.createElement('button');
 const btn_2 =document.createElement('button');
 
+id.textContent = element.id;
+userName.textContent =element.name;
+userPass.textContent =element.pass;
+
+
 div.classList.add('cardDiv');
 btn_1.innerText = 'edit';
 btn_2.textContent = 'delete';
 btn_1.classList = 'edit-btn';
 btn_2.classList = 'delete-btn';
 
-id.textContent = element.id;
-userName.textContent =element.name;
-userPass.textContent =element.pass;
+btn_1.addEventListener('click', function(i){
+document.querySelector('#userName').value=user.name;
+document.querySelector('#userPass').value=user.pass;
+if (dataBase !== null) {
+  i = dataBase;
+}
+append();
+});
+
+btn_2.addEventListener('click', function(i){
+dataBase.splice(i,1)
+append();
+})
+
 
 div.append(id, userName, userPass, btn_1, btn_2);
 
@@ -75,6 +101,7 @@ mainDiv.append(div);
   });
 
 };
+
 
 
 

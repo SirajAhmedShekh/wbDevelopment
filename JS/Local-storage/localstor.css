@@ -1,0 +1,86 @@
+*{
+  border: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  /* border: 2px solid; */
+  width: 600px;
+  height: auto;
+  padding: 20px;
+  background-color: aqua;
+}
+
+.name_input{
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  background-color:rgb(243, 235, 235);
+}
+
+.pass_input{
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  background-color:rgb(243, 235, 235);
+}
+
+.input-button{
+   height: 25px;
+text-align: center;
+ padding: 3px 18px;
+ color: white;
+ background-color: rgb(158, 86, 226);
+ border: none;
+ outline: none;
+ border-radius: 5px;
+ font-size:15px ;
+}
+
+.cardDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(153, 0, 255);
+}
+
+.edit-btn{
+  height: 25px;
+text-align: center;
+ padding: 3px 20px;
+ color: white;
+ background-color: rgb(4, 207, 14);
+ border: none;
+ outline: none;
+ border-radius: 5px;
+ font-size:15px ;
+}
+
+.delete-btn{
+ height: 25px;
+text-align: center;
+  padding: 3px 10px;
+   color: white;
+ background-color:red;
+ border: none;
+ outline: none;
+ border-radius: 5px;
+ font-size:15px ;
+}
+
+#dataAppends{
+  width: 600px;
+  
+  /* background-color: blue; */
+}

@@ -14,6 +14,7 @@ json
 "name" = "siraj"
 }
 */
+ UI()
 
 
 function formFunction(e){
