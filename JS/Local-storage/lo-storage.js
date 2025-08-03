@@ -1,7 +1,7 @@
 
 let dataBase = JSON.parse(localStorage.getItem ("formData")) || [];
 
-// let editCurrents = null;
+let editCurrents = null;
 
 
 /* 
@@ -123,7 +123,6 @@ mainDiv.append(table);
 
 
 })
-
 
 }
 

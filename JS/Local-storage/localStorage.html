@@ -1,114 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>lokalstorage</title>
-  <link rel="stylesheet" href="localstor.css">
-</head>
-<body onload="append()">
-  <form onsubmit="formData(event)">
-<input class="name_input" placeholder="enter your name" type="text" name="userName" id="userName">
-<input class="pass_input" placeholder="enter your pass" type="password" name="userPass" id="userPass">
-<input class="input-button" type="submit" value="click me">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lokalstorage</title>
+    <link rel="stylesheet" href="localstor.css" />
+  </head>
+  <body onload="append()">
+    <form onsubmit="formData(event)">
+      <input
+        class="name_input"
+        placeholder="enter your name"
+        type="text"
+        name="userName"
+        id="userName"
+        autocomplete="email"
+      />
+      <input
+        class="pass_input"
+        placeholder="enter your pass"
+        type="password"
+        name="userPass"
+        id="userPass"
+        autocomplete="current-password"
+      />
+      <input class="input-button" type="submit" value="click me" />
+    </form>
+    <div id="dataAppends"></div>
+  </body>
+  <script>
+    let dataBase = JSON.parse(localStorage.getItem("sirajForData")) || [];dataBase
 
-  </form>
-  <div id="dataAppends"></div>
-</body>
-<script>
+    console.log(dataBase)
 
-const dataBase = JSON.parse(localStorage.getItem("formData")) || [];
+   let setCurrentIndex= null;
 
+    function formData(e) {
+      e.preventDefault();
+      let userName = document.querySelector("#userName").value.trim();
 
+      let userPass = document.querySelector("#userPass").value.trim();
+      // console.log(userPass)
+      if (userName.length === 0 && userPass.length === 0) return;
 
-function formData(e){
-e.preventDefault();
-let userName = document.querySelector('#userName').value;
-
-let userPass = document.querySelector('#userPass').value;
-// console.log(userPass)
-if (userName.length === 0 || userPass.length === 0) {
-  return;
-}
-
-
-let objData = {
-  id: Date.now(),
-  name: userName,
-  pass: userPass
-  // console.log(objData)
-};
-
-// console.log(objData)
-
-
-dataBase.push(objData);
-
-localStorage.setItem('sirajForData',JSON.stringify(dataBase))
-append();
-document.querySelector('#userName').value='';
-document.querySelector('#userPass').value='';
-
-
-
-
-}
-
-const append = () =>{
-  const mainDiv = document.querySelector('#dataAppends');
-
-  mainDiv.innerHTML='';
-
-  dataBase.map((element)=>{
-const div = document.createElement('div');
-const id = document.createElement('h1');
-const userName = document.createElement('h3');
-const userPass = document.createElement('h3');
-const btn_1 =document.createElement('button');
-const btn_2 =document.createElement('button');
-
-id.textContent = element.id;
-userName.textContent =element.name;
-userPass.textContent =element.pass;
+      if (setCurrentIndex !== null) {
+         dataBase[setCurrentIndex] = {
+          ...dataBase[setCurrentIndex],
+          name: userName,
+          pass:userPass
+         }
+        setCurrentIndex= null;
+      }else{
+         let objData = {
+        id: Date.now(),
+        name: userName,
+        pass: userPass,
+        // console.log(objData)
+      };
+        dataBase.push(objData);
+      }
 
 
-div.classList.add('cardDiv');
-btn_1.innerText = 'edit';
-btn_2.textContent = 'delete';
-btn_1.classList = 'edit-btn';
-btn_2.classList = 'delete-btn';
+     
+      // console.log(objData)
 
-btn_1.addEventListener('click', function(i){
-document.querySelector('#userName').value=user.name;
-document.querySelector('#userPass').value=user.pass;
-if (dataBase !== null) {
-  i = dataBase;
-}
-append();
-});
+      localStorage.setItem("sirajForData", JSON.stringify(dataBase));
+      append();
+      document.querySelector("#userName").value = "";
+      document.querySelector("#userPass").value = "";
+    }
 
-btn_2.addEventListener('click', function(i){
-dataBase.splice(i,1)
-append();
-})
+    const append = () => {
+      const mainDiv = document.querySelector("#dataAppends");
 
+      mainDiv.innerHTML = "";
 
-div.append(id, userName, userPass, btn_1, btn_2);
+      dataBase.map((element,i) => {
+        const div = document.createElement("div");
+        const id = document.createElement("h1");
+        const userName = document.createElement("h3");
+        const userPass = document.createElement("h3");
+        const btn_1 = document.createElement("button");
+        const btn_2 = document.createElement("button");
 
-mainDiv.append(div);
+        id.textContent = element.id;
+        userName.textContent = element.name;
+        userPass.textContent = element.pass;
 
+        div.classList.add("cardDiv");
+        btn_1.innerText = "edit";
+        btn_2.textContent = "delete";
+        btn_1.classList = "edit-btn";
+        btn_2.classList = "delete-btn";
 
-  });
+        btn_1.addEventListener('click', function(){
+          let user = dataBase[i];
+        document.querySelector('#userName').value=user.name;
+        document.querySelector('#userPass').value=user.pass;
+        setCurrentIndex = i;
+        });
 
-};
+        btn_2.addEventListener("click", () => {
+          let deleteData = dataBase.filter((el) => {
+            return el.id !== element.id;
+          });
+          dataBase = deleteData;
+          localStorage.setItem("sirajForData", JSON.stringify(dataBase));
+          append();
+        });
 
+        div.append(id, userName, userPass, btn_1, btn_2);
 
-
-
-
-
-
-
-
-</script>
+        mainDiv.append(div);
+      });
+    };
+  </script>
 </html>
