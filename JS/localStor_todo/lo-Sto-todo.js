@@ -1,18 +1,23 @@
 let dataBase = JSON.parse(localStorage.getItem("sirajTodo")) || [];
 
+console.log(dataBase);
+
 const myTodo = () => {
   const userName = document.querySelector("#userName").value;
+
+  if (!userName) return ;
 
   let objData = {
     id: Date.now(),
     name: userName,
   };
 
-  dataBase.append(objData);
+  dataBase.push(objData);
 
   localStorage.setItem("sirajTodo", JSON.stringify(dataBase));
 
-  dataFun();
+
+  loadItam();
 };
 
 const loadItam = () => {
@@ -30,12 +35,10 @@ const loadItam = () => {
     btn_1.innerText = "edit";
     btn_2.innerText = "delete";
 
-    div.classList.add('dataDiv')
+    div.classList.add("dataDiv");
 
-div.append(id,text,btn_1,btn_2);
+    div.append(id, text, btn_1, btn_2);
 
-mainDiv.append(div);
-
-
+    mainDiv.append(div);
   });
 };
