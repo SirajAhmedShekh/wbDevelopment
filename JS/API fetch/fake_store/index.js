@@ -61,6 +61,11 @@ dataInfo.append(div);
 
 }
 
+const chageToCart = ()=>{
+window.location = "Cart.html";
+
+
+}
 
 // https://fakestoreapi.com/carts
 // https://fakestoreapi.com/products
