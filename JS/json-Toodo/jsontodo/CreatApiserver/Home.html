@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./Home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body onload="ApiCall()">
 
     <nav>
-    <ul>
-
+        <ul>
             <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/a326263e6337c30036e407bff85c74a9b8748989/Utils/Bakery%20Logo.svg"
-             id="logo"   al="Logo">
+                id="logo" al="Logo" onclick="sidebar()">
             <input id="search" name="search" type="search" placeholder="Search" onchange="searchFunc()" />
             <li>Home</li>
-            <li>Cart</li>
+            <li onclick="cartFunc()">Cart</li>
             <li onclick="loginFunc()">Login</li>
             <select name="Filter" id="filter" onclick="selectFun()">
                 <!-- <option value="Cookies">Cookies</option>
@@ -28,17 +29,27 @@
             </select>
         </ul>
     </nav>
-    <!-- <div class="slide">
-<h1>Filter</h1>
-<ul>
-    <li>High To Low</li>
-    <li>Low To High</li>
-</ul>
-    </div>-->
+    <div class="slide">
+        <h3>Filter</h3>
+        <div id="activeFilter"></div>
+        <ul>
+            <li onclick="sortHigh(this)">High To Low</li>
+            <li onclick="sortLow(this)">Low To High</li>
+        </ul>
+    </div>
 
-    <div id="info"></div> 
+    <div id="info"></div>
+
+    <div class="btn">
+        <input id="prev" value="Prev" type="button" onclick="prevBtnInvokation()">
+        <span class="numOfPage">Page: 1</span>
+        <input id="next" value="Next" type="button" onclick="nextBtnInvokation()">
+    </div>
 
 </body>
-<script src="./Home.js"> </script>
+<script>
+
+</script>
+<script src="./Home.js"></script>
 
 </html>

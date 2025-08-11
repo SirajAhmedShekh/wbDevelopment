@@ -1,64 +1,38 @@
+const registerApi = `http://localhost:3000/register`;
 
-// ============== login form js ================
+async function formData(e) {
+  e.preventDefault();
 
-const loginApi = `https://fakestoreapi.com/sweets`;
+  const email = document.querySelector("#userEmail").value.trim();
+  const password = document.querySelector("#userPassword").value.trim();
 
-const formsubmitData = async (e) => {
-e.preventDefault();
+  let formObject = {
+    email,
+    password,
+  };
 
+  try {
+    let response = await fetch(registerApi, {
+      method: "POST",
+      body: JSON.stringify(formObject),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let data = await response.json();
 
-// const loginApi = `http://localhost:3000/sweets`;
-//http://localhost:3000
-const email = document.querySelector("#username").value;  // problem
-//console.log('🚀 ~ email:', typeof email);
-
-const pass = document.querySelector("#password").value;
- //console.log('🚀 ~ pass:', typeof pass);
-
-  /* 
-    johnd -> username
-    m38rmF$ -> pass    
-    */
-
- let loginData = {
-        username: email,    //  problem
-        password: pass
+    if (data.accessToken) {
+      window.location = "Login.html";
     }
-
-try{
-let res = await fetch(loginApi, { 
-  method:'POST',
-  body:JSON.stringify(loginData),
-  headers: {
-    'content-type': 'application/json'}
-})
-
-let data = await res.json();
-console.log('🚀 ~ data:', data);
-
-localStorage.setItem('token', JSON.stringify(data.token));
-
-if(storage){
-window.location = "regestration.html";
-localStorage.removeItem('token');
+  } catch (error) {
+    console.log("🚀 ~ error:", error);
+  }
 }
 
-dataFun();
+const changeToLogin = () => {
+  window.location = "Login.html";
+};
 
-}catch(error){
-console.log(error)
-}
-
-}
-
-const dataFun = (value) => {
-
-console,log(value)
-
-
-
-
-}
-
-
-
+const loginPage = () => {
+  window.location = "Login.html";
+};

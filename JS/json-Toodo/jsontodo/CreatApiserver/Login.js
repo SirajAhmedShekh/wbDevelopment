@@ -36,3 +36,12 @@ async function loginForm(e) {
     }
 
 }
+
+const resFunc = () => {
+  window.location = 'regestration.html'
+}
+
+const homeFunc = () =>{
+
+    window.location = "Home.html";
+}

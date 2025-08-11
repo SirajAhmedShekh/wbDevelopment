@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Clean Login Form</title>
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -88,6 +89,7 @@
         .login-box p a {
             color: #4CAF50;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .login-box p a:hover {
@@ -112,8 +114,8 @@
                 <input type="password" id="userPassword" placeholder="Enter password" required>
             </div>
 
-            <button type="submit" class="login-btn">Login</button>
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <button onclick="homeFunc()" type="submit" class="login-btn">Login</button>
+            <p>Don't have an account? <a onclick="resFunc()">Sign up</a></p>
 
         </form>
 

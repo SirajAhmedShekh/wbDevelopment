@@ -4,6 +4,54 @@
       "email": "mehfoozkhan66@gmail.com",
       "password": "$2a$10$L5Qj0OHb5ZhkbCljyH2pmegZKpETd6Ea9SxupwpjP29ulBtjF3nfC",
       "id": 1
+    },
+    {
+      "email": "sirajshekh068@gmail.com",
+      "password": "$2a$10$rSC/mqfCrgIoGkS0xWasv.J23Bxbx3X9UJmcWDAfaQ2BTRZHv7hpi",
+      "id": 2
+    },
+    {
+      "email": "sirajshekh6587@gmail.com",
+      "password": "$2a$10$8BmeQvktjuoOQwt1ZxvZGeus2P///i0ujXJcidn6vp8NGzyTqdAku",
+      "id": 3
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "title": "Macaron Pink",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/11/03/11/25/macaron-4598410_1280.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 4,
+      "title": "Sweet Food,",
+      "price": 150,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2018/05/21/20/55/sweet-3419470_1280.jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
+    },
+    {
+      "id": 3,
+      "title": "Christmas, Cookie",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2021/12/09/14/22/christmas-6858261_1280.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
     }
   ],
   "sweets": [
@@ -18,7 +66,6 @@
         "rate": 3.9,
         "count": 120
       }
-      
     },
     {
       "id": 2,
@@ -855,7 +902,10 @@
       "description": "sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/1137312508/photo/assortment-of-products-with-high-sugar-level.jpg?s=1024x1024&w=is&k=20&c=31JIGszsx0mvGauCTxUED2epIbocfo4HIj3v9m_fjSQ=",
-      "rating": { "rate": 2.9, "count": 110 }
+      "rating": {
+        "rate": 2.9,
+        "count": 110
+      }
     },
     {
       "id": 72,
@@ -864,7 +914,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/507796111/photo/pakistani-mithai-4.jpg?s=1024x1024&w=is&k=20&c=gCdGTaMr8CZkzwukdDKrs6GGjNKnXVqBHpeFTIvZwR4=",
-      "rating": { "rate": 3.1, "count": 200 }
+      "rating": {
+        "rate": 3.1,
+        "count": 200
+      }
     },
     {
       "id": 73,
@@ -873,16 +926,22 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/598792196/photo/indian-sweets.jpg?s=1024x1024&w=is&k=20&c=sTXVK7LXwWpDH5cs-_u8y6mBpTvekAmtX017ZIvslgo=",
-      "rating": { "rate": 4.7, "count": 150 }
+      "rating": {
+        "rate": 4.7,
+        "count": 150
+      }
     },
     {
-      "id":74,
+      "id": 74,
       "title": "Indian sweets in a plate includes Gulab Jamun, Rasgulla, kaju katli",
       "price": 150.99,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/1054228718/photo/indian-sweets-in-a-plate-includes-gulab-jamun-rasgulla-kaju-katli-morichoor-bundi-laddu.jpg?s=1024x1024&w=is&k=20&c=zuHus6q049UchR1NkljCmCehsB-Ty8k_k_oO8J08y0E=",
-      "rating": { "rate": 3.1, "count": 130 }
+      "rating": {
+        "rate": 3.1,
+        "count": 130
+      }
     },
     {
       "id": 75,
@@ -891,7 +950,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyoCX2i6TT4TydjugO2emONGekyg0a14MJ4A&s",
       "category": "sweets",
-      "rating": { "rate": 4.1, "count": 140 }
+      "rating": {
+        "rate": 4.1,
+        "count": 140
+      }
     },
     {
       "id": 76,
@@ -900,7 +962,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2021/06/02/17/16/shrikhand-6304996_1280.jpg",
-      "rating": { "rate": 3.9, "count": 70 }
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
     },
     {
       "id": 77,
@@ -909,7 +974,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2023/08/30/08/38/mithai-8222859_1280.jpg",
-      "rating": { "rate": 3, "count": 250 }
+      "rating": {
+        "rate": 3,
+        "count": 250
+      }
     },
     {
       "id": 78,
@@ -918,7 +986,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/05/07/15/08/cookie-756601_960_720.jpg",
-      "rating": { "rate": 2.3, "count": 100 }
+      "rating": {
+        "rate": 2.3,
+        "count": 100
+      }
     },
     {
       "id": 79,
@@ -927,7 +998,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/11/29/07/45/desserts-1868181_960_720.jpg",
-      "rating": { "rate": 3.3, "count": 270 }
+      "rating": {
+        "rate": 3.3,
+        "count": 270
+      }
     },
     {
       "id": 80,
@@ -936,7 +1010,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2023/08/30/08/38/mithai-8222859_1280.jpg",
-      "rating": { "rate": 2.9, "count": 470 }
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      }
     },
     {
       "id": 81,
@@ -945,7 +1022,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/08/15/14/30/jagodzianki-4408179_960_720.jpg",
-      "rating": { "rate": 4.8, "count": 219 }
+      "rating": {
+        "rate": 4.8,
+        "count": 219
+      }
     },
     {
       "id": 82,
@@ -954,7 +1034,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/04/19/17/48/cake-balls-4139982_960_720.jpg",
-      "rating": { "rate": 3.2, "count": 255 }
+      "rating": {
+        "rate": 3.2,
+        "count": 255
+      }
     },
     {
       "id": 83,
@@ -963,7 +1046,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/03/26/23/09/cake-pops-693645_1280.jpg",
-      "rating": { "rate": 2.9, "count": 250 }
+      "rating": {
+        "rate": 2.9,
+        "count": 250
+      }
     },
     {
       "id": 84,
@@ -972,7 +1058,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2022/10/09/00/17/dessert-7507949_1280.jpg",
-      "rating": { "rate": 2.8, "count": 248 }
+      "rating": {
+        "rate": 2.8,
+        "count": 248
+      }
     },
     {
       "id": 85,
@@ -981,7 +1070,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2014/06/30/20/05/white-chocolate-380702_1280.jpg",
-      "rating": { "rate": 2.6, "count": 235 }
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
     },
     {
       "id": 86,
@@ -990,7 +1082,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2020/12/04/19/24/dessert-5804153_960_720.jpg",
-      "rating": { "rate": 2.9, "count": 320 }
+      "rating": {
+        "rate": 2.9,
+        "count": 320
+      }
     },
     {
       "id": 87,
@@ -999,7 +1094,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/01/13/13/19/chocolate-598174_1280.jpg",
-      "rating": { "rate": 3.8, "count": 279 }
+      "rating": {
+        "rate": 3.8,
+        "count": 279
+      }
     },
     {
       "id": 88,
@@ -1008,16 +1106,22 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/10/02/06/57/crunchy-moong-dal-fritters-2808043_1280.jpg",
-      "rating": { "rate": 4.7, "count": 155 }
+      "rating": {
+        "rate": 4.7,
+        "count": 155
+      }
     },
     {
       "id": 89,
       "title": "Pretzels, Baked goods, sweet Food ",
       "price": 117.95,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
-     "category": "sweets",
+      "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/07/01/19/43/pretzels-1491789_960_720.jpg",
-      "rating": { "rate": 3.5, "count": 116 }
+      "rating": {
+        "rate": 3.5,
+        "count": 116
+      }
     },
     {
       "id": 90,
@@ -1026,16 +1130,22 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2023/12/13/17/54/bun-8447394_960_720.jpg",
-      "rating": { "rate": 2.6, "count": 125 }
+      "rating": {
+        "rate": 2.6,
+        "count": 125
+      }
     },
     {
       "id": 91,
       "title": "Bun, Salt bar, Kaiser roll sweets",
-      "price": 214.30,
+      "price": 214.3,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/07/26/23/14/roll-2543510_960_720.jpg",
-      "rating": { "rate": 1.6, "count": 105 }
+      "rating": {
+        "rate": 1.6,
+        "count": 105
+      }
     },
     {
       "id": 92,
@@ -1044,7 +1154,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2023/12/18/11/05/chocolate-8455786_960_720.jpg",
-      "rating": { "rate": 4.6, "count": 1 }
+      "rating": {
+        "rate": 4.6,
+        "count": 1
+      }
     },
     {
       "id": 93,
@@ -1053,16 +1166,22 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2018/02/12/11/55/shrove-buns-3148128_1280.jpg",
-      "rating": { "rate": 1.8, "count": 111 }
+      "rating": {
+        "rate": 1.8,
+        "count": 111
+      }
     },
     {
       "id": 94,
       "title": "Hanamaki, Steamed bun, Steamed stuffed bun sweets",
       "price": 273.29,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
-     "category": "sweets",
+      "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/07/31/01/44/hanamaki-4374136_1280.jpg",
-      "rating": { "rate": 4.3, "count": 133 }
+      "rating": {
+        "rate": 4.3,
+        "count": 133
+      }
     },
     {
       "id": 95,
@@ -1071,7 +1190,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2013/08/01/18/36/wonton-169291_1280.jpg",
-      "rating": { "rate": 4.1, "count": 98 }
+      "rating": {
+        "rate": 4.1,
+        "count": 98
+      }
     },
     {
       "id": 96,
@@ -1080,16 +1202,22 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
-      "rating": { "rate": 2.1, "count": 103 }
+      "rating": {
+        "rate": 2.1,
+        "count": 103
+      }
     },
     {
-      "id":97,
+      "id": 97,
       "title": "Bread, Buns, Baked sweets",
       "price": 290.49,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2018/06/10/20/30/bread-3467243_960_720.jpg",
-      "rating": { "rate": 3.1, "count": 219 }
+      "rating": {
+        "rate": 3.1,
+        "count": 219
+      }
     },
     {
       "id": 98,
@@ -1098,7 +1226,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/03/27/22/08/colorful-1284475_1280.jpg",
-      "rating": { "rate": 2.2, "count": 283 }
+      "rating": {
+        "rate": 2.2,
+        "count": 283
+      }
     },
     {
       "id": 99,
@@ -1107,7 +1238,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/11/23/14/42/candies-1853287_1280.jpg",
-      "rating": { "rate": 4.4, "count":264 }
+      "rating": {
+        "rate": 4.4,
+        "count": 264
+      }
     },
     {
       "id": 100,
@@ -1116,16 +1250,22 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2020/12/04/19/24/dessert-5804153_1280.jpg",
-      "rating": { "rate": 3.9, "count": 57 }
+      "rating": {
+        "rate": 3.9,
+        "count": 57
+      }
     },
     {
       "id": 101,
       "title": "Cupcakes, Chocolate, Dark sweets",
       "price": 467.06,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
-     "category": "sweets",
+      "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/06/12/15/03/cupcakes-1452178_1280.jpg",
-      "rating": { "rate": 3.2, "count": 149 }
+      "rating": {
+        "rate": 3.2,
+        "count": 149
+      }
     },
     {
       "id": 102,
@@ -1134,25 +1274,34 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. .",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/09/18/20/55/candy-946392_960_720.jpg",
-      "rating": { "rate": 2.7, "count": 83 }
+      "rating": {
+        "rate": 2.7,
+        "count": 83
+      }
     },
     {
       "id": 103,
       "title": "Candies, Sweets, Food ",
       "price": 289.99,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
-     "category": "sweets",
+      "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2013/03/15/09/13/candies-93988_1280.jpg",
-      "rating": { "rate": 4.5, "count": 107}
+      "rating": {
+        "rate": 4.5,
+        "count": 107
+      }
     },
     {
       "id": 104,
       "title": "Sweet, Baklava, Food delicious",
       "price": 158.49,
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
-     "category": "sweets",
+      "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/08/12/17/13/sweet-2634742_1280.jpg",
-      "rating": { "rate": 4.9, "count": 88 }
+      "rating": {
+        "rate": 4.9,
+        "count": 88
+      }
     },
     {
       "id": 105,
@@ -1161,7 +1310,10 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/09/26/13/45/sweet-4506016_960_720.jpg",
-      "rating": { "rate": 4.4, "count": 293 }
+      "rating": {
+        "rate": 4.4,
+        "count": 293
+      }
     }
   ]
 }

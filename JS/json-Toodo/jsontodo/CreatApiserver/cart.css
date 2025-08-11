@@ -1,0 +1,16 @@
+#cart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cardDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 20px;
+  border-radius: 20px;
+  /* border: 2px solid red; */
+  box-shadow: 4px 4px 10px 2px black;
+}
