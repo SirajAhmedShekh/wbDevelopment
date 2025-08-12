@@ -52,6 +52,18 @@
         "rate": 4.7,
         "count": 500
       }
+    },
+    {
+      "id": 2,
+      "title": "Gingerbread, Cookies ",
+      "price": 200,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
     }
   ],
   "sweets": [
