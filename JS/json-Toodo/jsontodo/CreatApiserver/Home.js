@@ -10,9 +10,10 @@ let logo = document.querySelector('#logo');
 
 logo = false;
 
-const storage = JSON.parse(sessionStorage.getItem("category"));
+// const storage = JSON.parse(sessionStorage.getItem("category"));
 
 const countCategory = () => {
+  const storage = JSON.parse(sessionStorage.getItem("category"));
   if (!storage) return;
 
   let filterSelect = document.querySelector("#filter");
@@ -63,6 +64,8 @@ const appendsFunc = (data) => {
     let count = document.createElement("h3");
     let id = document.createElement("h3");
     let btn = document.createElement("button");
+    let cartItem = cartData.find((c) => c.id === element.id);
+    let quantity = cartItem ? cartItem.quantity : 0;
 
 
     cardDiv.className = "card_div";
@@ -86,7 +89,7 @@ const appendsFunc = (data) => {
       category.innerText = `category : ${element.category}`;
       description.innerText = element.description;
       rate.innerText = `Rate : ${element.rating.rate}`;
-      count.innerText = `count : ${element.rating.count}`;
+      count.innerText = `count : ${quantity}`;
       id.innerText = `id : ${element.id}`;
       title.classList.remove("placeholder");
       img.classList.remove("placeholder");
@@ -99,25 +102,55 @@ const appendsFunc = (data) => {
 
 
     }, 1000);
-    btn.addEventListener('click', () => addtocart(element.id));
+    btn.addEventListener('click', () => addtocart(element));
 
     rating.append(rate, count);
     cardDiv.append(img, id, title, price, category, description, rating, btn);
     dataShow.append(cardDiv);
-    
+
   });
 };
 
-const addtocart = async (id) => {
-  const product = allProducts.find(p => p.id === id);
-  
-  let response = await fetch(cartApi, {
-    method: 'POST',
-    body: JSON.stringify(product),
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  })
+const addtocart = async (element, countElement) => {
+  // const product = allProducts.find((p) => p.id === id);
+  // console.log(element);
+
+  const res = await fetch(`${cartApi}?id=${element.id}`);
+  const data = await res.json();
+
+  if (data.length) {
+    const updated = {
+      ...data[0],
+      quantity: (data[0].quantity || 1) + 1,
+    };
+
+    await fetch(`${cartApi}/${data[0].id}`, {
+      method: "PUT",
+      body: JSON.stringify(updated),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (countElement)
+      countElement.innerHTML = `<b><u>Quantity</u>: ${updated.quantity}</b>`;
+    cart_num();
+
+    // alert("Quantity Updated To Cart");
+  } else {
+    await fetch(cartApi, {
+      method: "POST",
+      body: JSON.stringify({ ...element, quantity: 1 }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (countElement) countElement.innerHTML = <b><u>Quantity</u>: 1</b>;
+    cart_num();
+
+    // alert("Item Added To Cart!");
+  }
 };
 
 const searchFunc = async () => {
@@ -214,7 +247,7 @@ const loginFunc = () => {
   window.location = "regestration.html";
 }
 
-const cartFunc = () => {
+const cartFun = () => {
   window.location = "homecart.html"
 }
 
@@ -251,10 +284,7 @@ const nextBtnInvokation = () => {
   dataFetch();
 };
 
-window.onload = () => {
-  ApiCall();      // for category dropdown
-  dataFetch();    // for initial paginated data
-};
+
 
 const removePlaceholder = () => {
   const placeholder = document.querySelectorAll(".placeholder");
@@ -262,3 +292,25 @@ const removePlaceholder = () => {
     element.classList.remove("placeholder");
   });
 };
+const cart_num = async () => {
+  if (window.location.pathname.split("/").pop() === "homecart.html") return;
+
+  try {
+    let res = await fetch(`http://localhost:3000/cart`);
+    let cartData = await res.json();
+
+    let total = cartData.reduce((sum, item) => {
+      return sum + (item.quantity || 0);
+    }, 0);
+    document.querySelector("#cart_num").innerHTML = total;
+  } catch (error) {
+    console.log("Error updating cart total:", error);
+  }
+};
+
+window.onload = () => {
+  ApiCall();      // for category dropdown
+  dataFetch();
+  cart_num();// for initial paginated data
+};
+

@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hcart</title>
-</head>
-<body onload="cartFunc()">
-    <div id="cartDiv"></div>
+    <title>Home</title>
+    <link rel="stylesheet" href="./Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <button class="cartbtn" onclick="cartbtn()">Back to Home</button>
+</head>
+
+<body onload="apiCall()">
+
+    <nav>
+        <ul>
+            <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/a326263e6337c30036e407bff85c74a9b8748989/Utils/Bakery%20Logo.svg"
+                id="logo" al="Logo" onclick="sidebar()">
+            <input id="search" name="search" type="search" placeholder="Search" onchange="searchFunc()" />
+            <li>Home</li>
+            <li onclick="cartFun()">Cart</li>
+            <li onclick="loginFunc()">Login</li>
+            <select name="Filter" id="filter" onclick="selectFun()">
+                <!-- <option value="Cookies">Cookies</option>
+                <option value="Cakes">Cakes</option>
+                <option value="Sweets">Sweets</option> -->
+            </select>
+        </ul>
+    </nav>
+    <div class="slide">
+        <h3>Filter</h3>
+        <div id="activeFilter"></div>
+        <ul>
+            <li onclick="sortHigh(this)">High To Low</li>
+            <li onclick="sortLow(this)">Low To High</li>
+        </ul>
+    </div>
+
+    <div id="info"></div>
+
+    <div class="btn">
+        <input id="prev" value="Prev" type="button" onclick="prevBtnInvokation()">
+        <span class="numOfPage">Page: 1</span>
+        <input id="next" value="Next" type="button" onclick="nextBtnInvokation()">
+    </div>
+
 </body>
+<script>
+
+</script>
 <script src="./Hcart.js"></script>
+
 </html>

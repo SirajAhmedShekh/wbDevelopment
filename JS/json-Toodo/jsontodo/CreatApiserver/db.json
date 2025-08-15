@@ -18,6 +18,18 @@
   ],
   "cart": [
     {
+      "id": 2,
+      "title": "Gingerbread, Cookies ",
+      "price": 200,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    },
+    {
       "id": 1,
       "title": "Macaron Pink",
       "price": 100,
@@ -27,18 +39,6 @@
       "rating": {
         "rate": 3.9,
         "count": 120
-      }
-    },
-    {
-      "id": 4,
-      "title": "Sweet Food,",
-      "price": 150,
-      "description": "A balanced diet is a cookie in each hand.",
-      "category": "Cookies",
-      "image": "https://cdn.pixabay.com/photo/2018/05/21/20/55/sweet-3419470_1280.jpg",
-      "rating": {
-        "rate": 2.1,
-        "count": 430
       }
     },
     {
@@ -54,15 +54,15 @@
       }
     },
     {
-      "id": 2,
-      "title": "Gingerbread, Cookies ",
-      "price": 200,
+      "id": 4,
+      "title": "Sweet Food,",
+      "price": 150,
       "description": "A balanced diet is a cookie in each hand.",
       "category": "Cookies",
-      "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
+      "image": "https://cdn.pixabay.com/photo/2018/05/21/20/55/sweet-3419470_1280.jpg",
       "rating": {
-        "rate": 4.1,
-        "count": 259
+        "rate": 2.1,
+        "count": 430
       }
     }
   ],
