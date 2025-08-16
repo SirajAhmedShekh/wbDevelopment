@@ -19,13 +19,13 @@
 // person.myFunc();
 
 
+
 function player (name, team){
 (this.name = name), (this.team = team);
 }
 
 let myPlayer = new Player ('Dhoni', 'chennaiSuperKing');
 let myPlayer1 = new Player ('kohali', 'RoyalChallengerBangelor');
-
 let Person2 = {
     name:'rahul',
 };
@@ -39,9 +39,10 @@ function myFunction(age, city){
     this.city = city;
 }
 
-myFunction.call(Person2, 24, 'pune');
+myFunction.call(Person2, 24, 'pune');  // call method use commas ,,.
 
 console.log(Person2);
+
 
 let Person4 ={
     name: 'sejal',
@@ -56,7 +57,7 @@ this.age = age;
 this.city = city;
 };
 
-myFunction1.apply(Person5, [24, 'pune']);
+myFunction1.apply(Person5, [24, 'pune']);   // apply method use array [].
 
 console.log(Person5);
 
