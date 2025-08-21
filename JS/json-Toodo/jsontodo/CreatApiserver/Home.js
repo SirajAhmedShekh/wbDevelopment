@@ -1,3 +1,4 @@
+
 const api = `http://localhost:3000/sweets`;
 
 let cartApi = `http://localhost:3000/cart` || [];
@@ -51,7 +52,7 @@ const appendsFunc = (data) => {
   dataShow.innerHTML = '';
 
   allProducts = data;
-
+let cartData = [];
   data.forEach((element) => {
     let cardDiv = document.createElement("div");
     let title = document.createElement("h4");
@@ -69,16 +70,16 @@ const appendsFunc = (data) => {
 
 
     cardDiv.className = "card_div";
-    description.className = "text_div placeholder";
-    price.className = "placeholder"
-    title.className = "title_div placeholder";
-    rating.className = "reating_1 placeholder";
-    category.className = "placeholder";
-    img.className = "placeholder";
-    id.className = "placeholder";
-    rate.className = "placeholder";
-    count.className = "placeholder";
-    btn.className = "cart_btn placeholder";
+    description.className = "text_div";
+    // price.className = "placeholder"
+    title.className = "title_div";
+    rating.className = "reating_1";
+    // category.className = "placeholder";
+    // img.className = "placeholder";
+    // id.className = "placeholder";
+    // rate.className = "placeholder";
+    // count.className = "placeholder";
+    btn.className = "cart_btn";
 
 
     setTimeout(() => {
@@ -91,14 +92,14 @@ const appendsFunc = (data) => {
       rate.innerText = `Rate : ${element.rating.rate}`;
       count.innerText = `count : ${quantity}`;
       id.innerText = `id : ${element.id}`;
-      title.classList.remove("placeholder");
-      img.classList.remove("placeholder");
-      price.classList.remove("placeholder");
-      description.classList.remove("placeholder");
-      rate.classList.remove("placeholder");
-      count.classList.remove("placeholder");
-      id.classList.remove("placeholder");
-      btn.classList.remove("placeholder");
+      // title.classList.remove("placeholder");
+      // img.classList.remove("placeholder");
+      // price.classList.remove("placeholder");
+      // description.classList.remove("placeholder");
+      // rate.classList.remove("placeholder");
+      // count.classList.remove("placeholder");
+      // id.classList.remove("placeholder");
+      // btn.classList.remove("placeholder");
 
 
     }, 1000);
@@ -146,7 +147,7 @@ const addtocart = async (element, countElement) => {
       },
     });
 
-    if (countElement) countElement.innerHTML = <b><u>Quantity</u>: 1</b>;
+    if (countElement) countElement.innerHTML = `<b><u>Quantity</u>: 1</b>`;
     cart_num();
 
     // alert("Item Added To Cart!");
@@ -286,19 +287,19 @@ const nextBtnInvokation = () => {
 
 
 
-const removePlaceholder = () => {
-  const placeholder = document.querySelectorAll(".placeholder");
-  placeholder.forEach((element) => {
-    element.classList.remove("placeholder");
-  });
-};
+// const removePlaceholder = () => {
+//   const placeholder = document.querySelectorAll(".placeholder");
+//   placeholder.forEach((element) => {
+//     element.classList.remove("placeholder");
+//   });
+// };
 const cart_num = async () => {
   if (window.location.pathname.split("/").pop() === "homecart.html") return;
 
   try {
     let res = await fetch(`http://localhost:3000/cart`);
     let cartData = await res.json();
-
+console.log(cartData)
     let total = cartData.reduce((sum, item) => {
       return sum + (item.quantity || 0);
     }, 0);

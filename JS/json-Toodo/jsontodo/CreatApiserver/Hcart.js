@@ -65,16 +65,16 @@ const appendsFunc = (data) => {
 
 
         cardDiv.className = "card_div";
-        description.className = "text_div placeholder";
+        description.className = "text_div";
         price.className = "placeholder"
-        title.className = "title_div placeholder";
-        rating.className = "reating_1 placeholder";
-        category.className = "placeholder";
-        img.className = "placeholder";
-        id.className = "placeholder";
-        rate.className = "placeholder";
-        count.className = "placeholder";
-        btn.className = "cart_btn placeholder";
+        title.className = "title_div ";
+        rating.className = "reating_1 ";
+        // category.className = "placeholder";
+        // img.className = "placeholder";
+        // id.className = "placeholder";
+        // rate.className = "placeholder";
+        // count.className = "placeholder";
+        btn.className = "cart_btn";
 
 
         setTimeout(() => {
@@ -87,14 +87,14 @@ const appendsFunc = (data) => {
             rate.innerText = `Rate : ${element.rating.rate}`;
             count.innerText = `count : ${element.rating.count}`;
             id.innerText = `id : ${element.id}`;
-            title.classList.remove("placeholder");
-            img.classList.remove("placeholder");
-            price.classList.remove("placeholder");
-            description.classList.remove("placeholder");
-            rate.classList.remove("placeholder");
-            count.classList.remove("placeholder");
-            id.classList.remove("placeholder");
-            btn.classList.remove("placeholder");
+            // title.classList.remove("placeholder");
+            // img.classList.remove("placeholder");
+            // price.classList.remove("placeholder");
+            // description.classList.remove("placeholder");
+            // rate.classList.remove("placeholder");
+            // count.classList.remove("placeholder");
+            // id.classList.remove("placeholder");
+            // btn.classList.remove("placeholder");
 
 
         }, 1000);
@@ -250,10 +250,7 @@ const nextBtnInvokation = () => {
     dataFetch();
 };
 
-window.onload = () => {
-    ApiCall();      // for category dropdown
-    dataFetch();    // for initial paginated data
-};
+
 
 const removePlaceholder = () => {
     const placeholder = document.querySelectorAll(".placeholder");
@@ -261,3 +258,12 @@ const removePlaceholder = () => {
         element.classList.remove("placeholder");
     });
 };
+
+window.onload = () => {
+    apiCall();      // for category dropdown
+    dataFetch();    // for initial paginated data
+
+};
+const gotoHome = ()=>{
+    window.location = "Home.html";
+}

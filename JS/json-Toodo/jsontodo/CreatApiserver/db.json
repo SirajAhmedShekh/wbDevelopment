@@ -27,7 +27,8 @@
       "rating": {
         "rate": 4.1,
         "count": 259
-      }
+      },
+      "quantity": 5
     },
     {
       "id": 1,
@@ -39,7 +40,8 @@
       "rating": {
         "rate": 3.9,
         "count": 120
-      }
+      },
+      "quantity": 5
     },
     {
       "id": 3,
@@ -51,7 +53,8 @@
       "rating": {
         "rate": 4.7,
         "count": 500
-      }
+      },
+      "quantity": 5
     },
     {
       "id": 4,
@@ -63,7 +66,34 @@
       "rating": {
         "rate": 2.1,
         "count": 430
-      }
+      },
+      "quantity": 2
+    },
+    {
+      "id": 5,
+      "title": "Cookie Christmas",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/01/07/10/23/cookie-1125527_1280.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      },
+      "quantity": 3
+    },
+    {
+      "id": 10,
+      "title": "Cardamom snow hugs",
+      "price": 109,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2017/12/19/10/11/cardamom-snow-hugs-3027724_1280.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      },
+      "quantity": 1
     }
   ],
   "sweets": [
