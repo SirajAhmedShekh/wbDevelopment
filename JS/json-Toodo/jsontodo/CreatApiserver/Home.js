@@ -62,7 +62,7 @@ let cartData = [];
     let img = document.createElement("img");
     let rating = document.createElement("div");
     let rate = document.createElement("h3");
-    let count = document.createElement("h3");
+    // let count = document.createElement("h3");
     let id = document.createElement("h3");
     let btn = document.createElement("button");
     let cartItem = cartData.find((c) => c.id === element.id);
@@ -105,7 +105,7 @@ let cartData = [];
     }, 1000);
     btn.addEventListener('click', () => addtocart(element));
 
-    rating.append(rate, count);
+    rating.append(rate);
     cardDiv.append(img, id, title, price, category, description, rating, btn);
     dataShow.append(cardDiv);
 
@@ -314,4 +314,6 @@ window.onload = () => {
   dataFetch();
   cart_num();// for initial paginated data
 };
+
+// cheng all code
 
