@@ -1,47 +1,49 @@
 
-const loginApi = `http://localhost:3000/login`;
+let token = sessionStorage.getItem('token');
+
+let path = window.location.pathname;
+
+setTimeout(() => {
+    let cartDisplay = document.querySelector('.cartDisplay');
+    // console.log('    🚀 ~ cartDisplay:', cartDisplay);
+
+    if (path == `/movie_api_app/Project/HTTPS_Methods/pages/Login.html` || path == '/Project/HTTPS_Methods/pages/Login.html') {
+        cartDisplay.style.display = 'none';
+        cartDisplay.style.opacity = 0;
+    }
+}, 100);
+
+const loginForm = async (e) => {
+    e.preventDefault();
+
+    const apiLogin = `http://localhost:3000/login`;
 
 
+    const userEmail = document.querySelector('#userEmail').value;
+    const userPassword = document.querySelector('#userPassword').value;
 
-async function loginForm(e) {
-    e.preventDefault()
 
-    const email = document.querySelector("#userEmail").value.trim();
-    const password = document.querySelector("#userPassword").value.trim();
-
-    let formObject = {
-        email,
-        password
+    let userData = {
+        email: userEmail,
+        password: userPassword
     }
 
     try {
-        let response = await fetch(loginApi, {
+        let res = await fetch(apiLogin, {
             method: 'POST',
-            body: JSON.stringify(formObject),
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json', "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify(userData)
         });
-
-        let data = await response.json();
-        console.log('🚀 ~ data:', data);
-        sessionStorage.setItem('token', JSON.stringify(data.accessToken));
+        let data = await res.json();
 
         if (data.accessToken) {
-            window.location = 'Home.html'
+            sessionStorage.setItem("token", JSON.stringify(data.accessToken));
+            window.location.pathname = '/Project/HTTPS_Methods/index.html';
         }
-
+        else if (data === 'Cannot find user') { alert("data coudn't found"); window.location = 'Signup.html' }
     } catch (error) {
         console.log('🚀 ~ error:', error);
     }
-
-}
-
-const resFunc = () => {
-  window.location = 'regestration.html'
-}
-
-const homeFunc = () =>{
-
-    window.location = "Home.html";
 }
