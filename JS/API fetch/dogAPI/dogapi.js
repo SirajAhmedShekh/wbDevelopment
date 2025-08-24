@@ -27,7 +27,9 @@ console.log(error)
 
 const Dogfuns = (value)=>{
 console.log(value)
+value.forEach((element)=>{
 
+})
 
 
 
