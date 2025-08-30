@@ -6,7 +6,7 @@ function myform(e) {
   let mobile = document.getElementById('mobile_nuber').value;
   let email = document.getElementById('email').value;
 
-  // user validation 
+  // ===== user validation ====
 
   if (userName == "") {
     document.getElementById("username_msg").innerHTML = "please fill the username field";
@@ -24,7 +24,7 @@ function myform(e) {
     document.getElementById("username_msg").innerHTML = ""
   }
 
-  // password validation
+  // ==== password validation ====
 
   if (Password == "") {
     document.getElementById("pass_msg").innerHTML = "please fill the password field";
@@ -42,7 +42,7 @@ function myform(e) {
     document.getElementById("pass_msg").innerHTML = "";
   }
 
-  // confirPass Validation
+  // ==== confirPass Validation ====
 
   if (confirmPassword == "") {
     document.getElementById("confpass_msg").innerHTML = "please fill the confirmPassword field";
@@ -52,7 +52,7 @@ function myform(e) {
     document.getElementById("confpass_msg").innerHTML = ""
   }
 
-  // mobileNumber Validation
+  // ==== mobileNumber Validation ====
 
   if (mobile == "") {
     document.getElementById("mobile_msg").innerHTML = "please fill the mobile field";
@@ -72,7 +72,7 @@ function myform(e) {
     document.getElementById("mobile_msg").innerHTML = ""
   }
 
-  // email Validation
+  // ==== email Validation ====
 
   if (email == "") {
     document.getElementById("email_msg").innerHTML =

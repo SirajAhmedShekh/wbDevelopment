@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "f_name": "Siraj",
+        "l_name": "Shaikh",
+        "married": true
+    },
+    {
+        "id":2,
+        "f_name": "Ramesh",
+        "l_name": "paal",
+        "married": false
+    },
+    {
+        "id":3,
+        "f_name": "Ajad",
+        "l_name": "Ahmad",
+        "married": false
+    },
+    {
+        "id":4,
+        "f_name": "Rohan",
+        "l_name": "gak",
+        "married": true
+    },
+    {
+        "id":6,
+        "f_name": "Yasmeen",
+        "l_name": "Shaikh",
+        "married": false
+    },
+    {
+        "id":7,
+        "f_name": "Afreen",
+        "l_name": "Shaikh",
+        "married": false
+    },
+     {
+        "id":5,
+        "f_name": "Iqra",
+        "l_name": "Shaikh",
+        "married": false
+    }
+]
