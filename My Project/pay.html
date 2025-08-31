@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    
+</head>
+<body>
+    <div class="container">
+
+    <form onsubmit="paymentFunc(event)">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <label>full name :</label>
+                    <input type="text" id="user" placeholder="john deo">
+                    <span id="username_msg"></span>
+                </div>
+                <div class="inputBox">
+                    <label>Email :</label>
+                    <input type="email" id="email" placeholder="example@example.com">
+                    <span id="email_msg"></span>
+                </div>
+                <div class="inputBox">
+                     <label>Address :</label>
+                    <input type="text" id="address" placeholder="room - street - locality" required>
+                </div>
+                <div class="inputBox">
+                      <label>City :</label>
+                    <input type="text" id="city" placeholder="mumbai" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                          <label>State :</label>
+                        <input type="text" id="state" placeholder="india" required>
+                    </div>
+                    <div class="inputBox">
+                          <label>Zip Code :</label>
+                        <input type="text" id="zipCode" placeholder="123 456">
+                        <span id="zipCode_msg"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="../../images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" id="cardName" placeholder="mr. john deo">
+                    <span id="cardname_msg"></span>
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" id="cardNumber" placeholder="1111-2222-3333-4444">
+                    <span id="cardnumber_msg"></span>
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" id="expMonth" placeholder="january">
+
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" id="expYear" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" id="cardCvv" placeholder="1234">
+                        <span id="cardcvv_msg"></span>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+
+    </form>
+
+</div>    
+    
+</body>
+<script src="/pay.js"></script>
+</html>
