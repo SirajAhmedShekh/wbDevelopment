@@ -108,7 +108,7 @@ function paymentFunc(e) {
     document.getElementById("cardnumber_msg").innerHTML = "";
   }
 
-  // ==== CVV Validation ====
+  // ==== Cvv Validation ====
 
   if (cardCvv == "") {
     document.getElementById("cardcvv_msg").innerHTML = "please fill the cardnumber field";
