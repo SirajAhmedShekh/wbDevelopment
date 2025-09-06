@@ -1,3 +1,5 @@
+
+// lezy loading
 function loadscript(url){
 
     let isLoaded = document.querySelectorAll(".dynamic-script");
