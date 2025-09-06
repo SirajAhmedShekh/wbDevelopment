@@ -1,3 +1,5 @@
+// two sum problem
+
 let nums = [2,11,7,15];
 let target = 9;
  function twosum(){
