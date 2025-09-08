@@ -29,3 +29,42 @@
 // let result = isPalindrome(arr)
 // console.log(result);
 
+// let strs = ["flower","flow","flight"];
+// let target ="";
+
+// function comman (){
+// if(target=[0]){
+//     for(let i=0;i<strs.length;i++){
+//         target.push(strs)
+//         for(let j=i+1; j<strs.length;i++){
+//             target.push(strs[i])
+//         } 
+//     }
+// }
+// if(strs[i]==strs[j]){
+//     }
+//     return target;
+// }
+
+// let ans = comman();
+// console.log(ans);
+
+
+let arr = ["flower","flow","flight"]
+
+function isPalindrome(){
+    let jhola = arr[0];
+    let jholaLen = jhola.length;
+    for(let i=0; i<arr.length; i++){
+        let current_str = arr[i];
+        while(jhola !== current_str.substring(0, jholaLen)){
+    jholaLen--;
+    if(jholaLen === 0) return ""
+    jhola = jhola.substring(0, jholaLen);
+    
+        }
+    }
+    return jhola;
+}
+let ans = isPalindrome();
+console.log(ans);
