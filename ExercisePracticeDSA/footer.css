@@ -40,6 +40,10 @@ a {
   font-size: larger;
 }
 
+a:hover{
+  color: #ebb44d;
+}
+
 .parent1,
 .parent2,
 .parent3,
