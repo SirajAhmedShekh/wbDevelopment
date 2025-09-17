@@ -123,6 +123,6 @@ font-size: large;
 .iconUl li:hover .img_span p {
   color: #ebb44d;
 }
-.iconUl li:hover .img_span p{
+/* .iconUl li:hover .img_span p{
   cursor: context-menu;
-}
+} */
