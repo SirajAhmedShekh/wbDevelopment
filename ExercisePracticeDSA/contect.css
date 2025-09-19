@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 
-section{
+section {
   width: 100%;
   height: auto;
 }
@@ -30,7 +30,7 @@ section{
   padding: 10px;
 }
 
-.contect_parent1> .cp1_child1 > p {
+.contect_parent1 > .cp1_child1 > p {
   font-size: 22px;
   padding-top: 45px;
   line-height: 30px;
@@ -90,10 +90,99 @@ section{
   background-color: #ffcc06;
 }
 
-.cp2_box1_icondiv>i{
-    font-size: 30px;
+.cp2_box1_icondiv > i {
+  font-size: 30px;
 }
 
-.cp2_child2{
-    margin: 0px 0px 100px 0px;
+.cp2_child2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 150px 0px;
+  gap: 50px;
+}
+
+.cp2_child2_mapDiv {
+  width: 40%;
+}
+
+.cp2_child2_formDiv {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+}
+
+.cp2_child2_formDiv > form > h1 {
+  font-size: 37px;
+  font-weight: 800;
+  margin: 0px 0px 50px 0px;
+}
+
+.form_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+   color: #4c5258;
+}
+
+.form_box > label {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 0px;
+  border: none;
+  outline: none;
+}
+
+.form_box > label>span{
+  font-size: 25px;
+  color: #e91309;
+  font-weight:normal;
+}
+
+.form_box > input {
+  font-size: 22px;
+  padding: 12px 12px;
+  outline: none;
+  color: #6a625a;
+  border: 3px solid #dddde2;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.form_box > input:focus,.form_box > textarea:focus{
+  border: 3px solid #f5cb2a;
+  opacity: 1;
+}
+
+form {
+  width: 100%;
+}
+
+.form_box > textarea {
+  height: 250px;
+  font-size: 22px;
+  padding: 12px 12px;
+  color: #6a625a;;
+  outline: none;
+  border: 3px solid #dddde2;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.cp2_child2_formDiv > form > button {
+  padding: 15px 40px;
+  font-size: 23px;
+  font-weight: 550;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #e8e5e4;
+  background-color: #0a0501;
+}
+
+.cp2_child2_formDiv > form > button:hover {
+  background-color: #ffcc06;
 }
