@@ -64,29 +64,29 @@
                 </div>
 
                 <div class="cp2_child2_formDiv">
-                    <form>
+                    <form onsubmit="formFunc(event)">
                         <h1>We’d love To Hear From You!</h1>
                         <div class="form_box">
                             <label>First & Last Name <span>*</span></label>
-                            <input type="text">
-                            <span id="userName_msg"></span>
+                            <input type="text" id="user">
+                            <span id="username_msg"></span>
                         </div>
                         <div class="form_box">
                             <label>Email Address <span>*</span></label>
-                            <input type="email">
+                            <input type="email" id="email">
                             <span id="email_msg"></span>
                         </div>
                         <div class="form_box">
                             <label>Subject <span>*</span></label>
-                            <input type="text">
+                            <input type="text" id="subject">
                             <span id="subject_msg"></span>
                         </div>
                         <div class="form_box">
                             <label>Comment or Message <span>*</span></label>
-                            <textarea name="massage"></textarea>
-                            <span id="Comment_msg"></span>
+                            <textarea name="message" id="comment"></textarea>
+                            <span id="comment_msg"></span>
                         </div>
-                        <button type="submit">Send Message</button>
+                        <button type="submit" value="submit">Send Message</button>
                     </form>
                 </div>
 
@@ -96,5 +96,5 @@
 
     </section>
 </body>
-
+<script src="/contect.js"></script>
 </html>

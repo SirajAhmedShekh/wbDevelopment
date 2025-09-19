@@ -171,6 +171,12 @@ form {
   font-weight: 500;
 }
 
+.form_box >span{
+  font-size: 20px;
+  margin-top:10px ;
+}
+
+
 .cp2_child2_formDiv > form > button {
   padding: 15px 40px;
   font-size: 23px;
